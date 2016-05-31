@@ -34,6 +34,19 @@ article, div, footer, header, main, nav, section, #react-root {
 }
 
 
+.col-md-4 {
+    border-color: #e1e1e1;
+    border-style: solid;
+    border-width: 3px;
+
+
+}
+
+h3 {
+    display: inline; 
+}
+
+
 main {
     padding-bottom: 80px; /*footer height*/
     /*height: calc(100% - 145px);*/
@@ -79,7 +92,6 @@ footer {
     -ms-flex-positive: 1;
     flex-grow: 1;
     /*margin: 0 auto 30px;*/
-    /*max-width: 1135px;*/
     width: 100%;
 }
 
