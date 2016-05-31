@@ -33,6 +33,13 @@ article, div, footer, header, main, nav, section, #react-root {
       position: relative;
 }
 
+.progress {
+    width: 800px;
+    margin-left: 130px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
 .share-main {
   padding-top: 100px;
 }
