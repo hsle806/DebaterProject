@@ -15,7 +15,7 @@ article, div, footer, header, main, nav, section, #react-root {
       -ms-flex-align: stretch;
       align-items: stretch;
       border: 0 solid #000;
-      box-sizing: border-box;
+      box-sizing: border-box;dho
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -31,6 +31,28 @@ article, div, footer, header, main, nav, section, #react-root {
       margin: 0;
       padding: 0;
       position: relative;
+}
+
+.share-main {
+  padding-top: 100px;
+}
+.share-content {
+    padding: 40px;
+    text-align: center;
+
+}
+
+.share-icon {
+    border-color: #e1e1e1;
+    border-style: solid;
+    border-width: 3px;
+    width: 350px;
+    height: 100px;
+    margin-left: 360px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    padding-bottom: 10px;
+    padding-top: 20px;
 }
 
 
