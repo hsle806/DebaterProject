@@ -66,16 +66,21 @@
               <a href="./debate-it-detail.html" class="list-group-item">2016 Presidential Election</a>
               <br><br>
               <br><br>              
-              <span id="ex18-label-1" class="hidden"></span>
-              <input id="ex19" type="text" style="align:middle"
+<!--               <span id="ex18-label-1" class="hidden" ></span>
+              <input id="ex19" type="text" style="margin:-100px"
               data-provide="slider"
               data-slider-ticks="[1, 2, 3]"
-              data-slider-ticks-labels='["PROS", "NEUTRAL", "CONS"]'
+              
               data-slider-min="1"
               data-slider-max="3"
               data-slider-step="1"
               data-slider-value="3"
-              data-slider-tooltip="hide" />
+              data-slider-tooltip="hide" /> -->
+              <!-- data-slider-ticks-labels='["PROS", "NEUTRAL", "CONS"]' -->
+              <div>
+              <input id="ex6" type="text" data-slider-min="1" data-slider-max="3" data-slider-step="1" data-slider-value="2"/>
+              <span>PROS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEUTRAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONS</span>
+              </div>
               <br><br>
               <br><br>
               <fieldset class="form-group">
@@ -108,6 +113,13 @@
       </div>
     </footer>
 
+    <script>
+      // With JQuery
+      $("#ex6").slider();
+      $("#ex6").on("slide", function(slideEvt) {
+        $("#ex6SliderVal").text(slideEvt.value);
+      });
+    </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

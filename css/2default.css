@@ -33,6 +33,9 @@ article, div, footer, header, main, nav, section, #react-root {
       position: relative;
 }
 
+.slider.slider-horizontal {
+    margin-left: 320px
+}
 
 .progress {
     width: 800px;
