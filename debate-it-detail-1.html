@@ -30,6 +30,9 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->  
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="./slider/bootstrap-slider.css" media="all" />
+  <script src="./slider/bootstrap-slider.js"></script>
 </head>
 
 <body>
@@ -43,25 +46,10 @@
             <div class="col-md-3" style="margin-top:-85px">
                 <!-- Controversial Issues -->
                 <p class="lead"><h3>Category</h3></p>
-                  <div class="list-group" style="margin-top:-10px">
-                    <h5>
-                      <% for(var i=0; i<cate.length; i++){ %>
-                          <% if(i == 0) {%>
-                          <a href="#" class="list-group-item active">
-                          <%} else {%>
-                          <a href="#" class="list-group-item">
-                          <% } %>
-                              <%= cate[i] %>
-                          </a>
-                      <% } %>
-                    </h5>
-                  </div>  
-
-<!-- 
                 <div class="list-group" style="margin-top:-10px">
                   <h5>
-                    <a href="#" class="list-group-item">MOST POPULAR</a>
-                    <a href="#" class="list-group-item active">HEALTH & MEDICINE</a>
+                    <a href="#" class="list-group-item active">MOST POPULAR</a>
+                    <a href="#" class="list-group-item">HEALTH & MEDICINE</a>
                     <a href="#" class="list-group-item">EDUCATION</a>
                     <a href="#" class="list-group-item">POLITICS</a>
                     <a href="#" class="list-group-item">SCIENCE & TECHNOLOGY</a>
@@ -70,42 +58,39 @@
                     <a href="#" class="list-group-item">SEX & GENDER</a>
                     <a href="#" class="list-group-item">ENTERTAINMENT & SPORTS</a>
                     <a href="#" class="list-group-item">ECONOMY & TAXES</a>
-                  </h5>
-                </div> 
--->
+                  </h7>
+                </div>
             </div>
 
-            <div class="col-md-9">
-              <div class="row">
-                  <div class="col-md-12">
-                    <div class="list-group">
-                      <% for(var i=0; i< title.length; i++){ %>
-                      <% for(var j=0; j< title[i].length; j++){ %>
-                          <a href="./debate-it-detail.html" class="list-group-item">
-                              <%= title[i][j] %>
-                          </a>
-                      <% } %>
-                      <% } %>
-
-<!-- 
-                      <a href="./debate-it-detail.html" class="list-group-item">2016 Presidential Election</a>
-                      <a href="#" class="list-group-item">Medical Marijuana</a>
-                      <a href="#" class="list-group-item">Gun Control</a>
-                      <a href="#" class="list-group-item">Animal Testing</a>
-                      <a href="#" class="list-group-item">Death Penalty</a>
-                      <a href="#" class="list-group-item">School Uniforms</a>
-                      <a href="#" class="list-group-item">Drinking Age - Lower It?</a>
-                      <a href="#" class="list-group-item">Minimum Wage</a>
-                      <a href="#" class="list-group-item">Abortion</a>
-                      <a href="#" class="list-group-item">Illegal Immigration</a>
-                      <a href="#" class="list-group-item">Topic List</a>
-                      <a href="#" class="list-group-item">Topic List</a>
-                      <a href="#" class="list-group-item">Topic List</a>
-                      </div>
- -->
-                  </div>
-              </div>
+            <div class="col-md-9" style="text-align:center">
+              <form method="post">
+                <a href="./debate-it-detail.html" class="list-group-item"><b>2016 Presidential Election</b></a>
+                <br><br>
+                <br><br>              
+  <!--               <span id="ex18-label-1" class="hidden" ></span>
+                <input id="ex19" type="text" style="margin:-100px"
+                data-provide="slider"
+                data-slider-ticks="[1, 2, 3]"
+                
+                data-slider-min="1"
+                data-slider-max="3"
+                data-slider-step="1"
+                data-slider-value="3"
+                data-slider-tooltip="hide" /> -->
+                <!-- data-slider-ticks-labels='["PROS", "NEUTRAL", "CONS"]' -->
+                <div style="margin-left: 335px" > 
+                <input id="ex6" type="text" data-slider-tooltip="hide" data-slider-min="1" data-slider-max="3" data-slider-step="1" data-slider-value="2" name="sliderValue"/>
+                </div>                
+                <p style="margin-left: 5px">PROS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEUTRAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONS</p>
+                <br><br>
+                <br><br>
+                <fieldset class="form-group">
+                  <textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Write your opinion very freely!" name="opinion"></textarea>
+                </fieldset>
+                <button type="submit" class="btn btn-primary" style="width:100px;margin:0 0 0 auto">Submit</button>
+              </form>
             </div>
+            
         </div>
     </div>
 
@@ -131,6 +116,14 @@
         <span class="s09">© 2016 Debate Community</span>
       </div>
     </footer>
+
+    <script>
+      // With JQuery
+      $("#ex6").slider();
+      $("#ex6").on("slide", function(slideEvt) {
+        $("#ex6SliderVal").text(slideEvt.value);
+      });
+    </script>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>

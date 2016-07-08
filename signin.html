@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 <!-- Optional theme -->
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -34,14 +34,14 @@
         <div class="container-fluid" id="grid">
           <!-- Log in -->
           <div class="upper-container">
-            <form class="form-signin">
+            <form class="form-signin" method="post">
               <h3 class="form-signin-heading">Aready have an account?</h3>
               
               <label for="inputEmail" class="sr-only">Email address</label>
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <input type="email" id="inputEmail" name="loginEmail" class="form-control" placeholder="Email address" required autofocus>
               
               <label for="inputPassword" class="sr-only">Password</label>
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <input type="password" id="inputPassword" name="loginPassword" class="form-control" placeholder="Password" required>
               
               <div class="checkbox">
                 <label>
@@ -54,32 +54,33 @@
               </div>
 
               <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
-              
+              <!-- 
               <p class="facebook-login"><a href="fb-signin.html">Sign in with facebook</a></p>
+               -->
             </form>
           </div>
           <br><br>
           <!-- Sign up -->
           <div class="lower-container">
-            <form class="form-signup">
+            <form class="form-signup" method="post">
               <h3 class="form-signup-heading">Sign up</h3>
             
               <label for="inputEmail" class="sr-only">Email address</label>
-              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+              <input type="email" id="inputEmail" name="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 
               <label for="nickname" class="sr-only">Nickname</label>
-              <input type="text" id="nickname" class="form-control" placeholder="Nickname" required autofocus>
+              <input type="text" id="nickname" name="nickname" class="form-control" placeholder="Nickname" required autofocus>
           
               <label for="inputPassword" class="sr-only">Password</label>
-              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+              <input type="password" id="inputPassword" name="inputPassword" class="form-control" placeholder="Password" required>
               
               <label for="inputPassword_confirm" class="sr-only">Password confirm</label>
               
-              <input type="password" id="inputPassword_confirm" class="form-control" placeholder="Password confirm" required>
+              <input type="password" id="inputPassword_confirm" name="inputPassword_confirm" class="form-control" placeholder="Password confirm" required>
           
               <br>
-              
-              <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+              <!-- <input type="submit" onclick="clicked();" value="Button" /> -->
+              <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="clicked();">Sign up</button>
             </form>
           </div>
         </div>
@@ -90,11 +91,13 @@
       <div class="r79" style="max-width:935px;">
         <a class="s79 u77" href="index.html"><h1>Debate Community</h1></a>
         <div class="t79">
-          <a class="n79" href="my-account.html">
+          <!-- 
+          <a class="n79" href="./my-account.html">
             <button type="button" class="btn btn-primary">My Account</button>
           </a>
-          <a class="n79" href="signin.html">
-            <button type="button" class="btn btn-success">Login</button>
+           -->
+          <a class="n79" href="./signin.html">
+            <button type="button" class="btn btn-success">Sign in / Sign up</button>
           </a>
         </div>
       </div>
@@ -131,6 +134,12 @@
       }
     });
   });
+  </script>
+
+  <script type="text/javascript">
+  function clicked() {
+      alert('clicked');
+  }
   </script>
 
   <!-- Search function -->

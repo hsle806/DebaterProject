@@ -19,8 +19,12 @@
 
   <!-- Default CSS -->
   <link rel="stylesheet" type="text/css" href="./css/2default.css"/>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 
+<!-- <body data-toggle="modal" data-target="#myModal"> -->
 <body>
   <span id="react-root">
     <div class="share-main">
@@ -34,19 +38,43 @@
             </div>
           </div>
           <p class="lead">Amount of remaining contribution to reach Lv.6 !<img src="./images/thumb-up.png" height="40px" width="40px" style="margin-bottom:7px"></p>
+
         </div>
       </div>
     </div>
+
+  <!-- <div class="container">
+    <!-- Modal --> -->
+    <div class="modal fade" id="myModal" role="dialog" style="margin-top:100px">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Coming Soon!</h4>
+          </div>
+          <div class="modal-body">
+            <p>This page is under construction...</p>
+          </div>
+          <div class="modal-footer">
+          <a href="./debate-community.html" class="btn btn-success" role="button">Back to Main Menu</a>
+          </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
 
     <nav class="h28" role="navigation">
       <div class="r79" style="max-width:950px;">
         <a class="s79 u77" href="./index.html"><h1>Debate Community</h1></a>
         <div class="t79">
+          <!-- 
           <a class="n79" href="./my-account.html">
             <button type="button" class="btn btn-primary">My Account</button>
           </a>
+           -->
           <a class="n79" href="./signin.html">
-            <button type="button" class="btn btn-success">Login</button>
+            <button type="button" class="btn btn-success">Sign in / Sign up</button>
           </a>
         </div>
       </div>
@@ -57,8 +85,11 @@
         <span class="s09">© 2016 Debate Community</span>
       </div>
     </footer>
+    </span>
 </body>
 
-
+<script>
+$("#myModal").modal()
+</script>
 
 </html>

@@ -33,8 +33,33 @@ article, div, footer, header, main, nav, section, #react-root {
       position: relative;
 }
 
+
+.test {
+    text-align:left;
+    display:inline;
+}
+
+#a
+{
+    float:left;
+    margin-right:;
+}
+#ex6
+{
+    /*font-weight:bold;*/
+    vertical-align:middle;
+    /*margin-left:60px;*/
+}
+#c
+{
+    float:right;
+    margin-left:30px;
+    /*padding-left:-60px;*/
+}
+
 .slider.slider-horizontal {
-    margin-left: 320px
+    width:180px !important;
+    /*margin-left: 320px*/
 }
 
 .progress {
