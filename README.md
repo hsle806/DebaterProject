@@ -20,13 +20,13 @@ $ sudo service mongod stop
 ```
 - Restart
 ```
-$ $ sudo service mongod restart
+$ sudo service mongod restart
 ```
 
 
-※ Specify Data Directory (Optional)
+※ Specify Data Directory 
 - Default: /data/db on Linux
-- if you want to change a data directory
+- if you want to change a data directory (Optional)
 ```
 $ mongod --dbpath "directory path"
 ```
