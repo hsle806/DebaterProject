@@ -1,0 +1,17 @@
+<nav class="h28" role="navigation">
+  <div class="r79" style="max-width:950px;">
+    <a class="s79 u77" href="./debate-community"><h1>Debate Community</h1></a>
+    <div class="t79">
+      <% if(username){ %>
+        <h5><b><%= name %>&nbsp;&nbsp;</b>
+        <a href="./logout" class="btn btn-info btn-sm">
+         <span class="glyphicon glyphicon-log-out"></span> Log out
+        </a></h4>
+      <% }else{ %>
+        <a class="n79" href="./signin">
+        <button type="button" class="btn btn-success">Sign in / Sign up</button>
+        </a>
+      <% } %>
+    </div>
+  </div>
+</nav>

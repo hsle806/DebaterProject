@@ -64,11 +64,11 @@
 
             <div class="col-md-9" style="text-align:center">
               <form method="post">
-                <a href="./debate-it-detail.html" class="list-group-item" style="margin-bottom:100px"><b>2016 Presidential Election</b></a>
-                <a href="./debate-it-detail-1.html">
+                <a href="./debate-it-detail" class="list-group-item" style="margin-bottom:100px"><b>2016 Presidential Election</b></a>
+                <a href="./debate-it-detail-1">
                   <button type="button" class="btn btn-default btn-lg">1. Express Your Opinion</button>
                 </a>
-                <a href="./debate-it-detail-2.html">
+                <a href="./debate-it-detail-2">
                   <button type="button" class="btn btn-default btn-lg">2. Classify Pros and Cons</button>
                 </a>
             </div>
@@ -79,25 +79,23 @@
 
     <nav class="h28" role="navigation">
       <div class="r79" style="max-width:1200px;">
-        <a class="s79 u77" href="./index.html"><h1>Debate Community</h1></a>
+        <a class="s79 u77" href="./debate-community"><h1>Debate Community</h1></a>
         <div class="t79">
-          <!-- 
-          <a class="n79" href="./my-account.html">
-            <button type="button" class="btn btn-primary">My Account</button>
-          </a>
-           -->
-          <a class="n79" href="./signin.html">
+          <% if(username){ %>
+            <h5><b><%= name %>&nbsp;&nbsp;</b>
+            <a href="./logout" class="btn btn-info btn-sm">
+             <span class="glyphicon glyphicon-log-out"></span> Log out
+            </a></h4>
+          <% }else{ %>
+            <a class="n79" href="./signin">
             <button type="button" class="btn btn-success">Sign in / Sign up</button>
-          </a>
+            </a>
+          <% } %>
         </div>
       </div>
     </nav>
 
-    <footer class="g28" role="contentinfo">
-      <div class="n09 p09" style="max-width:950px;">
-        <span class="s09">© 2016 Debate Community</span>
-      </div>
-    </footer>
+    <% include ./footer.html %>
 
     <script>
       // With JQuery

@@ -38,25 +38,27 @@
                   </h1>
                   <nav>
                    <ul class="pager" >
-                      <li><a href="./index.html" style="background-color:#fafafa"><span aria-hidden="true">&larr;</span></a></li>
+                      <li><a href="./index" style="background-color:#fafafa"><span aria-hidden="true">&larr;</span></a></li>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                       <li><h3 class="ui header"><span>Help improve reliability of debating data</span></h3></li>
                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                      <li><a href="./index.html" style="background-color:#fafafa"><span aria-hidden="true">&rarr;</span></a></li><br><br>
+                      <li><a href="./index" style="background-color:#fafafa"><span aria-hidden="true">&rarr;</span></a></li><br><br>
                     </ul>
                   </nav>
                   <div class="eight wide column">
-                    <a class="btn btn-primary" style="max-width:150px;" href="debate-community.html">
+                    <a class="btn btn-primary" style="max-width:150px;" href="./debate-community">
                       <i class="right chevron icon"></i>
                       Get Started Now
                     </a>  
+<!-- 
                     <br><br>
                     <% if(username){ %>
                         <h4 style="color:red">Connection Sucess <br>(ID: <%= username %>, NAME: <%= name %>)</h4>
                         <a href="./logout">logout</a>
                     <% }else{ %>
-                    <!--    <h2> Please Login. </h2> -->
+                        <h2> Please Login. </h2>
                     <% } %>
+-->
                   </div>
                 </div>
               </div>
@@ -65,27 +67,8 @@
       </article>
     </main>
 
-    <nav class="h28" role="navigation">
-      <div class="r79" style="max-width:950px;">
-        <a class="s79 u77" href="#"><h1>Debate Community</h1></a>
-        <div class="t79">
-          <!-- 
-          <a class="n79" href="./my-account.html">
-            <button type="button" class="btn btn-primary">My Account</button>
-          </a>
-           -->
-          <a class="n79" href="./signin.html">
-            <button type="button" class="btn btn-success">Sign in / Sign up</button>
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <footer class="g28" role="contentinfo">
-      <div class="n09 p09" style="max-width:950px;">
-        <span class="s09">© 2016 Debate Community</span>
-      </div>
-    </footer>
+    <% include ./header.html %>
+    <% include ./footer.html %>
 
   </span>
 </body>

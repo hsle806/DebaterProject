@@ -43,7 +43,7 @@
 
         <div class="row">
             <div class="col-lg-12" style="display:inline-block" >
-              <a href="./debate-it-detail.html" class="list-group-item" style="margin-bottom:40px; text-align:center;"><b>2016 Presidential Election</b></a>
+              <a href="./debate-it-detail" class="list-group-item" style="margin-bottom:40px; text-align:center;"><b>2016 Presidential Election</b></a>
               <p style="margin:-20px 0 5px 755px"><b>PROS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NEUTRAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CONS</b></p> 
             </div>
         </div>    
@@ -178,7 +178,7 @@
                 </div>
             </div>
 
-
+<!-- 
             <div class="col-lg-8">
               <p>6. An article (abbreviated ART) is a word (or prefix or suffix) that is used with a noun to indicate the type of reference being made by the noun. Articles specify grammatical definiteness of the noun, in some languages extending to volume or numerical scope.</p>
             </div>
@@ -196,10 +196,7 @@
                     <li><a href="#">subtopic1</a></li>
                     <li><a href="#">subtopic2</a></li>
                     <li><a href="#">subtopic3</a></li>
-                    <!-- 
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                     -->
+
                   </ul>
                 </div>
             </div>
@@ -221,10 +218,7 @@
                     <li><a href="#">subtopic1</a></li>
                     <li><a href="#">subtopic2</a></li>
                     <li><a href="#">subtopic3</a></li>
-                    <!-- 
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                     -->
+
                   </ul>
                 </div>
             </div>
@@ -246,10 +240,7 @@
                     <li><a href="#">subtopic1</a></li>
                     <li><a href="#">subtopic2</a></li>
                     <li><a href="#">subtopic3</a></li>
-                    <!-- 
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                     -->
+  
                   </ul>
                 </div>
             </div>
@@ -272,10 +263,7 @@
                     <li><a href="#">subtopic1</a></li>
                     <li><a href="#">subtopic2</a></li>
                     <li><a href="#">subtopic3</a></li>
-                    <!-- 
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                     -->
+
                   </ul>
                 </div>
             </div>
@@ -298,41 +286,63 @@
                     <li><a href="#">subtopic1</a></li>
                     <li><a href="#">subtopic2</a></li>
                     <li><a href="#">subtopic3</a></li>
-                    <!-- 
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                     -->
+
                   </ul>
                 </div>
             </div>
 
+ -->
+
 
           </div>
         </div>
+        <button type="submit" class="btn btn-primary" style="width:100px;margin:0 0 0 auto">Submit</button>
     </div>
-
 
     <nav class="h28" role="navigation">
       <div class="r79" style="max-width:1200px;">
-        <a class="s79 u77" href="./index.html"><h1>Debate Community</h1></a>
+        <a class="s79 u77" href="./debate-community"><h1>Debate Community</h1></a>
         <div class="t79">
-          <!-- 
-          <a class="n79" href="./my-account.html">
-            <button type="button" class="btn btn-primary">My Account</button>
-          </a>
-           -->
-          <a class="n79" href="./signin.html">
+          <% if(username){ %>
+            <h5><b><%= name %>&nbsp;&nbsp;</b>
+            <a href="./logout" class="btn btn-info btn-sm">
+             <span class="glyphicon glyphicon-log-out"></span> Log out
+            </a></h4>
+          <% }else{ %>
+            <a class="n79" href="./signin">
             <button type="button" class="btn btn-success">Sign in / Sign up</button>
-          </a>
+            </a>
+          <% } %>
         </div>
       </div>
     </nav>
 
-    <footer class="g28" role="contentinfo">
-      <div class="n09 p09" style="max-width:950px;">
-        <span class="s09">© 2016 Debate Community</span>
+    <% include ./footer.html %>
+
+  <!-- <div class="container">
+    <!-- Modal --> -->
+    <div class="modal fade" id="myModal" role="dialog" style="margin-top:100px">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Coming Soon!</h4>
+          </div>
+          <div class="modal-body">
+            <p>This page is under construction...</p>
+          </div>
+          <div class="modal-footer">
+          <a href="./debate-community" class="btn btn-success" role="button">Back to Main Menu</a>
+          </div>
+          </a>
+        </div>
       </div>
-    </footer>
+    </div>
+  <!-- </div> -->
+
+    <script>
+      $("#myModal").modal()
+    </script>
 
     <script>
       // With JQuery

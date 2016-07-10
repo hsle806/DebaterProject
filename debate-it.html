@@ -81,7 +81,7 @@
                     <div class="list-group">
                       <% for(var i=0; i< title.length; i++){ %>
                       <% for(var j=0; j< title[i].length; j++){ %>
-                          <a href="./debate-it-detail.html" class="list-group-item">
+                          <a href="./debate-it-detail" class="list-group-item">
                               <%= title[i][j] %>
                           </a>
                       <% } %>
@@ -110,27 +110,8 @@
     </div>
 
 
-    <nav class="h28" role="navigation">
-      <div class="r79" style="max-width:1200px;">
-        <a class="s79 u77" href="./index.html"><h1>Debate Community</h1></a>
-        <div class="t79">
-          <!-- 
-          <a class="n79" href="./my-account.html">
-            <button type="button" class="btn btn-primary">My Account</button>
-          </a>
-           -->
-          <a class="n79" href="./signin.html">
-            <button type="button" class="btn btn-success">Sign in / Sign up</button>
-          </a>
-        </div>
-      </div>
-    </nav>
-
-    <footer class="g28" role="contentinfo">
-      <div class="n09 p09" style="max-width:950px;">
-        <span class="s09">© 2016 Debate Community</span>
-      </div>
-    </footer>
+    <% include ./header.html %>
+    <% include ./footer.html %>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
